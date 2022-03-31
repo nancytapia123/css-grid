@@ -1,0 +1,24 @@
+/* .contenedor {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    grid-template-columns: 30px 200px 60px;
+    grid-template-rows: 100px 100px 100px;
+} */
+.contenedor {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    /*
+    En este caso son tres colunmnas la primera y la tercer columna les asignamos un valor con la funcion minmax,
+     mientras que la segunda le ponemosun valor estatico de 200px
+    grid-template-columns: minmax( valor minimo ancho de celda, hasta) 200px minmax( valor minimo ancho de celda, hasta) */
+    grid-template-columns: minmax(30px, 300px) 200px  minmax(60px, 250px);
+    /* En este caso utilizaos la funcion repeat para indicar que son 3 filar lac cuales su anchura
+        dependera del contenido dela misma */
+    grid-template-rows: repeat(3,auto);
+}
+.item {
+   border: 5px solid #00bcd4 ;
+    font-size:2rem;
+}
